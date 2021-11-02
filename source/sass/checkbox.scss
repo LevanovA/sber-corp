@@ -1,0 +1,113 @@
+.checkbox {
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+
+        @include before_480 {
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+
+        &--half {
+            width: 50%;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__window {
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        margin-right: 12px;
+        background: grey;
+        border: 1px solid grey;
+        border-radius: 1px;
+    }
+
+    &__icon-mark {
+        fill: #0047BB;
+        opacity: 0;
+        transition: 0.5s;
+    }
+
+    &__name {
+        display: flex;
+        align-items: flex-start;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0.04em;
+        color: #909CB5;
+        cursor: pointer;
+
+        &--info {
+            margin-right: 12px;
+            min-width: 126px;
+        }
+    }
+
+    &__input:checked + .checkbox__name {
+        .checkbox__icon-mark {
+            opacity: 1;
+        }
+    }
+
+    &__link {
+        color: $text-secondary-c;
+        text-decoration: none;
+        border-bottom: 1px solid $text-secondary-c;
+        transition: 0.5s;
+
+        &:hover {
+            border-bottom: 1px solid transparent;
+        }
+    }
+
+    &__text {
+
+        &--margin {
+            margin-right: 5px;
+        }
+    }
+
+    &__error-message {
+        display: none;
+        margin-top: 5px;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.04em;
+        color: $error-c;
+    }
+
+    &--calculator {
+
+        .checkbox__window {
+            background: #3683EB;
+            border: 1px solid #3683EB;
+        }
+
+        .checkbox__icon-mark {
+            fill: #ffffff;
+        }
+
+        .checkbox__name {
+            color: #FFFFFF;
+        }
+    }
+
+    &--error {
+
+        .checkbox__window {
+            border: 1px solid $error-c;
+        }
+    }
+}

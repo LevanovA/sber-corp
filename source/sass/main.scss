@@ -1,10 +1,24 @@
-.main__title {
-    position: relative;
-    width: 750px;
-    margin: 0 auto;
-    padding-top: 300px;
-    font-size: 34px;
-    text-align: center;
+.main {
+
+    &__title {
+        position: relative;
+        width: 750px;
+        margin: 0 auto;
+        padding-top: 300px;
+        font-size: 34px;
+        text-align: center;
+    }
+
+    &__calc {
+        margin: 40px 0;
+        padding: 80px 0;
+        background: radial-gradient(50.57% 51.22% at 50% 50%,#2981f9 0,#165ab7 100%);
+    }
+
+    &__box {
+        max-width: 400px;
+        margin: 0 auto;
+    }
 }
 
 .icon-address {

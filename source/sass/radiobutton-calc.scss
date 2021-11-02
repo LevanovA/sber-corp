@@ -1,0 +1,41 @@
+.radiobutton-calc {
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        border: 1px solid #C4CCD7;
+    }
+
+    &__item {
+        flex-grow: 1;
+
+        @include before_768 {
+            width: 100%;
+        }
+
+        &:not(:last-child) {
+            border-right: 1px solid #C4CCD7;
+
+            @include before_768 {
+                border-right: none;
+                border-bottom: 1px solid #C4CCD7;
+            }
+        }
+    }
+
+    &__name {
+        display: block;
+        padding: 10px;
+        font-size: 16px;
+        line-height: 21px;
+        text-align: center;
+        color: #ffffff;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+    &__input:checked + .radiobutton-calc__name {
+        color: $text-secondary-c;
+        background: #ffffff;
+    }
+}

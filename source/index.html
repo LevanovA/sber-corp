@@ -16,29 +16,86 @@
         <div class="wrapper"></div>
     </header>
     <section class="main">
-        <h2 class="main__title">
-            Все получилось!!! Удачного кодинга :=))
-        </h2>
-        <div class="icon-box">
-            <svg class="icon-address" width="24" height="24">
-                <use xlink:href="#icon-address"></use>
-            </svg>
-        </div>
-        <div class="button-box">
-            <a class="button" data-popup-name="popup-agreement">Показать</a>
-        </div>
-        <div>
-            <a class="button" href="#">Продолжить</a>
-        </div>
-        <div class="slider">
-            <div class="slider-item">
-                <img src="img/img1.jpg" alt="">
+        <div class="wrapper">
+            <h2 class="main__title">
+                Все получилось!!! Удачного кодинга :=))
+            </h2>
+            <div class="icon-box">
+                <svg class="icon-address" width="24" height="24">
+                    <use xlink:href="#icon-address"></use>
+                </svg>
             </div>
-            <div class="slider-item">
-                <img src="img/img2.jpg" alt="">
+            <div class="button-box">
+                <a class="button" data-popup-name="popup-agreement">Показать</a>
             </div>
-            <div class="slider-item">
-                <img src="img/img3.jpg" alt="">
+            <div>
+                <a class="button" href="#">Продолжить</a>
+            </div>
+            <div class="checkbox">
+                <div class="checkbox__item">
+                    <input
+                        id="user-agreement"
+                        type="checkbox"
+                        class="checkbox__input visually-hidden"
+                        name="user-agreement"
+                    >
+                    <label for="user-agreement" class="checkbox__name">
+                        <div class="checkbox__window">
+                            <svg class="checkbox__icon-mark" width="11px" height="8px">
+                                <use xlink:href="#icon-cell-select-body"></use>
+                            </svg>
+                        </div>
+                        <div class="checkbox__content">
+                            <a href="#" class="checkbox__link" target="_blank" rel="noopener noreferrer">Пользовательское соглашение</a>
+                            <span class="checkbox__text"> (включая Приложение № 1 Правила использования простой электронной подписи – (далее ПЭП));</span>
+                            <div class="checkbox__error-message">
+                                необходимо отметить это поле
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="main__calc">
+                <div class="main__box">
+                    <div class="radiobutton-calc">
+                        <div class="radiobutton-calc__list">
+                            <div class="radiobutton-calc__item">
+                                <input
+                                    id="term1"
+                                    type="radio"
+                                    class="radiobutton-calc__input radiobutton-calc__input--term visually-hidden"
+                                    name="termPeriod"
+                                    value="5"
+                                    checked
+                                    data-submit="submit"
+                                >
+                                <label for="term1" class="radiobutton-calc__name radiobutton-calc__name--term">5 лет</label>
+                            </div>
+                            <div class="radiobutton-calc__item">
+                                <input
+                                    id="term2"
+                                    type="radio"
+                                    class="radiobutton-calc__input radiobutton-calc__input--term visually-hidden"
+                                    name="termPeriod"
+                                    value="7"
+                                    data-submit="submit"
+                                >
+                                <label for="term2" class="radiobutton-calc__name radiobutton-calc__name--term">7 лет</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider">
+                <div class="slider-item">
+                    <img src="img/img1.jpg" alt="">
+                </div>
+                <div class="slider-item">
+                    <img src="img/img2.jpg" alt="">
+                </div>
+                <div class="slider-item">
+                    <img src="img/img3.jpg" alt="">
+                </div>
             </div>
         </div>
     </section>
