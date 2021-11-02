@@ -1,0 +1,200 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: 0.5s;
+
+    &--active {
+        opacity: 1;
+        visibility: visible;
+
+        .popup__content {
+            transform: translate(0, 0);
+            opacity: 1;
+        }
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100%;
+        padding: 30px 10px;
+    }
+
+    &__content {
+        position: relative;
+        max-width: 560px;
+        padding: 30px 40px 48px;
+        background: #ffffff;
+        transition: 0.5s;
+        transform: translate(0, -100%);
+        opacity: 0;
+    }
+
+    &__title {
+        margin-bottom: 32px;
+        font-size: 32px;
+        line-height: 45px;
+        color: #000000;
+
+        &--little {
+            font-size: 20px;
+            line-height: 28px;
+        }
+    }
+
+    &__row {
+        margin-bottom: 24px;
+    }
+
+    &__close {
+        position: absolute;
+        right: 25px;
+        top: 25px;
+        cursor: pointer;
+
+        &-icon {
+            fill: red;
+            transition: 0.5s;
+
+            &:hover {
+                fill: $text-secondary-c;
+            }
+        }
+    }
+
+
+    //------------------------------------------
+    &__list {
+        padding-left: 20px;
+    }
+
+    &__item {
+        margin-bottom: 20px;
+        font-weight: bold;
+        line-height: 24px;
+        color: #0044bb;
+    }
+
+    &__text {
+        font-weight: normal;
+        color: #000000;
+    }
+
+    &__input-box {
+        position: relative;
+        margin-bottom: 20px;
+
+        label {
+            position: relative;
+            display: block;
+            padding-left: 30px;
+            font-size: 14px;
+            line-height: 18px;
+            cursor: pointer;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 16px;
+                height: 16px;
+                border: 1px solid #0044bb;
+                box-sizing: border-box;
+            }
+        }
+
+        input:checked + label:after {
+            content: "";
+            position: absolute;
+            left: 5px;
+            top: 4px;
+            width: 7px;
+            height: 5px;
+            transform: rotate(135deg);
+            border-right: 1px solid #0044bb;
+            border-top: 1px solid #0044bb;
+            box-sizing: border-box;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__button {
+        font-size: 18px;
+        color: #fff;
+        padding: 14px 30px;
+        background: #0f54b9;
+        border: 1px solid #0f54b9;
+        border-radius: 4px;
+        transition: .5s;
+        cursor: pointer;
+        margin-top: 50px;
+
+        &:hover {
+            background: #ffffff;
+            color: #0f54b9;
+        }
+
+        &--white {
+            margin-left: 20px;
+            background: #ffffff;
+            color: #0f54b9;
+
+            &:hover {
+                color: #fff;
+                background: #0f54b9;
+            }
+        }
+
+        &--back {
+            margin-top: 0;
+        }
+    }
+
+    &__error-message {
+        position: absolute;
+        bottom: -20px;
+        left: 30px;
+        font-size: 12px;
+        line-height: 14px;
+        color: red;
+        opacity: 0;
+        transition: 0.5s;
+
+        &.popup__error-massage--show {
+            opacity: 1;
+        }
+    }
+
+    &__link {
+        color: #0f54b9;
+        text-decoration: none;
+        border-bottom: 1px solid #0f54b9;
+
+        &:hover {
+            border-bottom: 1px solid transparent;
+        }
+    }
+
+    &__box {
+        margin: 40px 0 20px;
+    }
+
+    &__text {
+        margin: 0 0 10px;
+        text-align: center;
+    }
+}

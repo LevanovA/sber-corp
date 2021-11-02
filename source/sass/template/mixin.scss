@@ -36,16 +36,28 @@ $z-indexes: (
     }
 }
 
-@mixin before__768 {
+@mixin before_768 {
     @media screen and (max-width: 767px) {
         @content;
     }
 }
 
-@mixin before__480 {
+@mixin before_480 {
     @media screen and (max-width: 479px) {
         @content;
     }
+}
+
+@mixin flex-block($jus-con: center, $al-it: center) {
+    display: flex;
+    justify-content: $jus-con;
+    align-items: $al-it;
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+    content: $content;
+    display: $display;
+    position: $pos;
 }
 
 //Смещение элемента
